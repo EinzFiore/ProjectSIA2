@@ -5,7 +5,7 @@
     @csrf
     <input type="hidden" name="_method" value="PUT">
     <fieldset>
-        <legend>Setting akun untuk transaksid</legend>
+        <legend>Setting akun untuk transaksi</legend>
         <table width="500px">
             <tr>
                 <td>Transaksi Retur</td>
@@ -13,6 +13,9 @@
                 <td>
                     <select name="akun" id="akun" class="form-control">
                         <option value="">-- Pilih Akun --</option>
+                        @foreach ($settings as $setting)
+                        <option value="<?= $setting->no_akun ?>"><?= $setting->no_akun ?></option>
+                        @endforeach
                     </select>
                 </td>
             </tr>
@@ -21,7 +24,10 @@
                 <td>500</td>
                 <td>
                     <select name="akun" id="akun" class="form-control">
-                        <option value="">-- Pilih Akun --</option>
+                        <option value="">-- Pilih Akun --</option>`
+                        @foreach ($settings as $setting)
+                        <option value="<?= $setting->no_akun ?>"><?= $setting->no_akun ?></option>
+                        @endforeach
                     </select>
                 </td>
             </tr>
@@ -31,6 +37,9 @@
                 <td>
                     <select name="akun" id="akun" class="form-control">
                         <option value="">-- Pilih Akun --</option>
+                        @foreach ($settings as $setting)
+                        <option value="<?= $setting->no_akun ?>"><?= $setting->no_akun ?></option>
+                        @endforeach
                     </select>
                 </td>
             </tr>

@@ -30,7 +30,7 @@ class AkunController extends Controller
         return redirect('/akun');
     }
 
-    public function show($id)
+    public function show()
     {
         $settings = Setting::all();
         return view('admin.akun.settings', ['settings' => $settings]);
