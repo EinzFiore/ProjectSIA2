@@ -44,8 +44,8 @@
             <hr class="sidebar-divider">
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('home') }}">
-                <i class="fas fa-fw fa-home"></i>
-                <span>Beranda</span></a>
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>Beranda</span></a>
             </li>
             @role('admin')
             <!-- Nav Item - Pages Collapse Menu -->
@@ -57,44 +57,72 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('user.index') }}"> Master User</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('barang.index') }}"> Master Barang</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('supplier.index') }}"> Master Supplier</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('akun.index') }}"> Master Akun</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('setting.transaksi') }}"> Master Setting Akun</a
-                    </div>
-                </div>
-                @endrole
+                        <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('user.index') }}"> Master
+                            User</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('barang.index') }}"> Master
+                            Barang</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('supplier.index') }}"> Master
+                            Supplier</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('akun.index') }}"> Master
+                            Akun</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('setting.transaksi') }}">
+                            Master Setting Akun</a </div> </div> @endrole </li> <li class="nav-item">
+                        {{-- <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages1"
+                            aria-expanded="true" aria-controls="collapsePages1">
+                            <i class="fas fa-fw fa-folder-open"></i>
+                            <span>Menu Utama 2</span>
+                        </a>
+                        <div id="collapsePages1" class="collapse" aria-labelledby="headingPages"
+                            data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 1</a>
+                                <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 2</a>
+                                <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 3</a>
+                                <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 4</a>
+                                <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 5</a>
+                            </div>
+                        </div> --}}
             </li>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages1"
                     aria-expanded="true" aria-controls="collapsePages1">
                     <i class="fas fa-fw fa-folder-open"></i>
-                    <span>Menu Utama 2</span>
+                    <span>Transaksi</span>
                 </a>
                 <div id="collapsePages1" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 1</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 2</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 3</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 4</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 5</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('pemesanan.transaksi') }}">
+                            Pemesanan</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="">
+                            Pembelian</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="">
+                            Retur</a>
                     </div>
                 </div>
             </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages2"
+                    aria-expanded="true" aria-controls="collapsePages2">
+                    <i class="fas fa-fw fa-folder-open"></i>
+                    <span>Laporan</span>
+                </a>
+                <div id="collapsePages2" class="collapse" aria-labelledby="headingPages"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item fas fa-arrow-circle-right" href=""> Jurnal
+                            Umum</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href=""> Stok
+                            Barang</a>
 
+                    </div>
+                </div>
+            </li>
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Menu Utama 3</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-archive"></i>
-                    <span>Menu Utama 4</span></a>
+                    <span>Setting</span></a>
             </li>
 
             <!-- Divider -->
@@ -164,7 +192,8 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
+                                <span
+                                    class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
                                 <img class="img-profile rounded-circle" src="{{asset('asset/img/avatar2.png')}}">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -232,14 +261,14 @@
                 </div>
                 <div class="modal-body">Pilih "Logout" apabila ingin keluar aplikasi</div>
                 <div class="modal-footer">
-                  <a class="btn btn-primary" href="{{ route('logout') }}" 
-                  onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                  {{ __('Logout') }}
-                  </a>
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                  </form>
-                  
+                    <a class="btn btn-primary" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+
                 </div>
             </div>
         </div>
