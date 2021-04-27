@@ -37,3 +37,5 @@ Route::resource('/akun', 'AkunController')->middleware('role:admin');
 Route::get('/akun/hapus/{id}', 'AkunController@destroy');
 Route::get('/akun/edit/{id}', 'AkunController@edit');
 Route::get('/akun/setting', 'AkunController@show');
+Route::get('/setting', 'SettingController@index')->name('setting.transaksi')->middleware('role:admin');
+Route::post('/setting/simpan', 'SettingController@simpan');

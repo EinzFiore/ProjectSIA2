@@ -6,9 +6,6 @@
 </div>
 <hr>
 <div class="card-header py-3" align="right">
-    <a href="/akun/setting" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm">
-        <i class="fas fa-plus fa-sm text-white-50"></i> Setting Akun
-    </a>
     <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal"
         data-target="#exampleModalScrollable">
         <i class="fas fa-plus fa-sm text-white-50"></i> Tambah
